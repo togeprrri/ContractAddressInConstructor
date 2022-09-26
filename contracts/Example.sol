@@ -9,6 +9,7 @@ contract Example {
 
     constructor(uint8 _var) {
         someVariable = _var;
+        contractAddressSolidity = address(this);
     }
 
     function someGetter() external view returns(uint8){
@@ -17,6 +18,10 @@ contract Example {
 
     function someSetter(uint8 _new) external {
         someVariable = _new;
+    }
+
+    function setAddressEthers(address _address) external {
+        contractAddressEthers = _address;
     }
 
 }
